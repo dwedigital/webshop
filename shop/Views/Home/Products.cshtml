@@ -1,0 +1,13 @@
+@model ProductsViewModel
+
+@if(Model.Products.Any())
+{
+    @foreach(ProductModel p in Model.Products)
+    {
+        <partial name="/Views/Shared/_Product.cshtml" model="p"/>
+    }
+}
+else
+{
+    <p>No products found</p>
+}
