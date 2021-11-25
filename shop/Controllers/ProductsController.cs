@@ -30,33 +30,43 @@ namespace shop.Controllers
 
         }
         [HttpGet]
-        
+
         public IActionResult New()
         {
 
-                return View(new ProductModel());
+            return View(new ProductModel());
 
-            
+
         }
 
+     
+        [HttpGet]
         public IActionResult Edit(int id)
         {
             ProductModel product = ProductModel.GetById(id);
             return View(product);
         }
+
+
         [HttpPost]
-        public IActionResult Add(ProductModel product){
-            if(ModelState.IsValid){
-                ProductModel.Save(product);
+        public IActionResult Edit(ProductModel product)
+        {
+            if (ModelState.IsValid)
+            {
+                ProductModel.Update(product);
                 return RedirectToAction("Index");
             }
 
             return View("New", product);
         }
-    [HttpPost]
-        public IActionResult Edit(ProductModel product){
-            if(ModelState.IsValid){
-                ProductModel.Update(product);
+
+
+        [HttpPost]
+        public IActionResult Add(ProductModel product)
+        {
+            if (ModelState.IsValid)
+            {
+                ProductModel.Save(product);
                 return RedirectToAction("Index");
             }
 

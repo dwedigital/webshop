@@ -56,6 +56,7 @@ namespace shop.Models
             product.Name = Convert.ToString(data.Rows[0]["name"]);
             product.PriceInPence = Convert.ToInt32(data.Rows[0]["PriceInPence"]);
             product.SKU = Convert.ToString(data.Rows[0]["sku"]);
+            product.Qty = Convert.ToInt32(data.Rows[0]["Qty"]);
 
             return product;
         }

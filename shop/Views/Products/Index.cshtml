@@ -37,13 +37,15 @@
             </td>
 
             <td>
-                @p.Price
+                £@p.Price
             </td>
 
             <td>
                 @p.SKU
             </td>
             <td>
+                <a asp-controller="Products" asp-action="Product" asp-route-id="@p.Id" type="button"
+                class="btn btn-light btn-small">View</a>
                 <a asp-controller="Products" asp-action="Delete" asp-route-id="@p.Id" type="button"
                 class="btn btn-danger btn-small">Delete</a>
                 <a asp-controller="Products" asp-action="Edit" asp-route-id="@p.Id" type="button"

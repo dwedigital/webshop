@@ -1,7 +1,6 @@
 @model ProductModel
 
 
-
 <div class="text-center">
     <h1 class="display-4">Edit Product</h1>
 </div>
@@ -22,11 +21,24 @@
         <input asp-for="SKU" class="form-control">
         <span asp-validation-for="SKU" class="text-danger"></span>
     </div>
-        <div class="mb-3">
+    <div class="mb-3">
         <label asp-for="Qty" class="form-label"></label>
         <input asp-for="Qty" class="form-control">
         <span asp-validation-for="Qty" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary">Update</button>
+    <a asp-controller="Products" asp-action="Index" type="button"
+                class="btn btn-light btn-small">Cancel</a>
 
 </form>
+
+@* @section Scripts{
+<script>
+    $(document).ready(function () {
+        console.log("ready!");
+        console.log(@Model.Qty)
+        $('#qty').value = @Model.Qty;
+    });
+
+</script>
+} *@
