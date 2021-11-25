@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using shop.Models;
 
 namespace shop
 {
@@ -23,6 +24,7 @@ namespace shop
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<DbConnection>(_ => new DbConnection(Configuration["ConnectionStrings:SQL"]));
             services.AddControllersWithViews();
         }
 

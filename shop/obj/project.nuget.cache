@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Q6yNZYwlyLLCyEX3C8Y9HYQAc79/nuiNyey+k4mVVWXBBrr8df1Ga8KXi5Zqq8NGD7qd3hPPqauQT4xxDBgPJw==",
+  "dgSpecHash": "nGgzgHx0wH+3wrQEf+P04kB2HqmJeIYX+clINeTPQHc4kNMEZ1lAHAMjy6Knw4IiCQA0kX9t6vQ/cXZyWf+HQw==",
   "success": true,
   "projectFilePath": "/Users/daveedwards/Documents/Documents – Dave’s MacBook Pro 13 Inch/Coding/dj_coding_course/web/webshop/shop/shop.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/daveedwards/.nuget/packages/mysqlconnector/2.0.0/mysqlconnector.2.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -15624,8 +15624,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/daveedwards/Documents/Documents – Dave’s MacBook Pro 13 Inch/Coding/dj_coding_course/web/webshop/shop/Views/Home/Product.cshtml",
-      "TargetPath": "Views\\Home\\Product.cshtml",
+      "FilePath": "/Users/daveedwards/Documents/Documents – Dave’s MacBook Pro 13 Inch/Coding/dj_coding_course/web/webshop/shop/Views/Products/Index.cshtml",
+      "TargetPath": "Views\\Products\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15634,13 +15634,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/daveedwards/Documents/Documents – Dave’s MacBook Pro 13 Inch/Coding/dj_coding_course/web/webshop/shop/Views/Admin/Index.cshtml",
-      "TargetPath": "Views\\Admin\\Index.cshtml",
+      "FilePath": "/Users/daveedwards/Documents/Documents – Dave’s MacBook Pro 13 Inch/Coding/dj_coding_course/web/webshop/shop/Views/Products/New.cshtml",
+      "TargetPath": "Views\\Products\\New.cshtml",
       "FileKind": "mvc"
     },
     {
       "FilePath": "/Users/daveedwards/Documents/Documents – Dave’s MacBook Pro 13 Inch/Coding/dj_coding_course/web/webshop/shop/Views/Home/Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/daveedwards/Documents/Documents – Dave’s MacBook Pro 13 Inch/Coding/dj_coding_course/web/webshop/shop/Views/Products/Product.cshtml",
+      "TargetPath": "Views\\Products\\Product.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15651,11 +15656,6 @@
     {
       "FilePath": "/Users/daveedwards/Documents/Documents – Dave’s MacBook Pro 13 Inch/Coding/dj_coding_course/web/webshop/shop/Views/Shared/_Product.cshtml",
       "TargetPath": "Views\\Shared\\_Product.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/daveedwards/Documents/Documents – Dave’s MacBook Pro 13 Inch/Coding/dj_coding_course/web/webshop/shop/Views/Home/Products.cshtml",
-      "TargetPath": "Views\\Home\\Products.cshtml",
       "FileKind": "mvc"
     },
     {

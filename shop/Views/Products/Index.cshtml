@@ -1,0 +1,46 @@
+﻿@model List<ProductModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Products</h1>
+</div>
+
+<table class="table table-bordered table-striped">
+
+        <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">QTY</th>
+      <th scope="col">Price</th>
+      <th scope="col">SKU</th>
+    </tr>
+   
+    @foreach (ProductModel p in Model)
+    {
+         <tr>
+            <td>
+                @p.Id
+            </td>
+
+            <td>
+                @p.Name
+            </td>
+
+            <td>
+                @p.Qty
+            </td>
+  
+            <td>
+                @p.Price
+            </td>
+
+            <td>
+                @p.Sku
+            </td>
+</tr>
+    }
+
+</table>
