@@ -30,9 +30,19 @@ namespace shop.Controllers
 
         }
         [HttpGet]
+        
         public IActionResult New()
         {
-            return View(new ProductModel());
+
+                return View(new ProductModel());
+
+            
+        }
+
+        public IActionResult Edit(int id)
+        {
+            ProductModel product = ProductModel.GetById(id);
+            return View(product);
         }
         [HttpPost]
         public IActionResult Add(ProductModel product){
@@ -43,11 +53,25 @@ namespace shop.Controllers
 
             return View("New", product);
         }
+    [HttpPost]
+        public IActionResult Edit(ProductModel product){
+            if(ModelState.IsValid){
+                ProductModel.Update(product);
+                return RedirectToAction("Index");
+            }
+
+            return View("New", product);
+        }
         [HttpGet]
         public IActionResult Product(int id)
         {
             ProductModel product = ProductModel.GetById(id);
             return View(product);
+        }
+        public IActionResult Delete(int id)
+        {
+            ProductModel.Delete(id);
+            return RedirectToAction("Index");
         }
 
 

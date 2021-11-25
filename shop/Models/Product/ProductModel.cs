@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using MySqlConnector;
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace shop.Models
 {
     public class ProductModel
@@ -13,15 +14,18 @@ namespace shop.Models
         public string Name { get; set; }
         [Required]
         [Range(0, 100)]
+        [Display(Name = "Quantity")]
         public int Qty { get; set; }
+
         [Required]
         [Range(0,100000)]
+        [Display(Name = "Price (in pence)")]
         public int PriceInPence { get; set; }
 
         public decimal Price => Convert.ToDecimal(PriceInPence)/100m;
         [Required]
         [StringLength(8)]
-        public string Sku { get; set; }
+        public string SKU { get; set; }
 
         public static List<ProductModel> GetAll()
         {
@@ -35,7 +39,8 @@ namespace shop.Models
                     Id = Convert.ToInt32(r["id"]),
                     Name = Convert.ToString(r["name"]),
                     PriceInPence = Convert.ToInt32(r["PriceInPence"]),
-                    Sku = Convert.ToString(r["sku"])
+                    SKU = Convert.ToString(r["sku"]),
+                    Qty = Convert.ToInt32(r["qty"])
                 });
             }
 
@@ -50,13 +55,23 @@ namespace shop.Models
             product.Id = Convert.ToInt32(data.Rows[0]["id"]);
             product.Name = Convert.ToString(data.Rows[0]["name"]);
             product.PriceInPence = Convert.ToInt32(data.Rows[0]["PriceInPence"]);
-            product.Sku = Convert.ToString(data.Rows[0]["sku"]);
+            product.SKU = Convert.ToString(data.Rows[0]["sku"]);
 
             return product;
         }
 
         public static void Save(ProductModel product){
             DbConnection.Current.SaveProduct(product);
+        }
+
+        public static void Update(ProductModel product)
+        {
+            DbConnection.Current.UpdateProduct(product);
+        }
+
+        public static void Delete(int id)
+        {
+            DbConnection.Current.DeleteProduct(id);
         }
     }
 }

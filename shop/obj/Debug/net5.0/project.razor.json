@@ -15629,6 +15629,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/daveedwards/Documents/Documents – Dave’s MacBook Pro 13 Inch/Coding/dj_coding_course/web/webshop/shop/Views/Products/Edit.cshtml",
+      "TargetPath": "Views\\Products\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/daveedwards/Documents/Documents – Dave’s MacBook Pro 13 Inch/Coding/dj_coding_course/web/webshop/shop/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
